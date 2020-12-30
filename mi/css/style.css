@@ -148,7 +148,7 @@ body {
 }
 .select-nav a{
     display: inline-block;
-    padding: 26px 10px 38px;
+    padding: 26px 10px 40px;
     color: #000000;
 }
 .select-nav a:hover{
@@ -392,6 +392,9 @@ info:after{
     background-size: 16px;
     float: right;
 }
+.top-left .liColor:hover{
+    background-color: #ff6700;
+ }
 .top-right{
     height: 460px;
 }
@@ -542,6 +545,7 @@ h2{
     position: absolute;
     top: 24px;
     right: 0;
+    cursor:pointer;
     zoom: 1;
 }
 .arrow:after{
@@ -758,6 +762,12 @@ h2{
     width: 992px;
     zoom: 1;
 }
+.houseRight .u1{
+    display: none;
+}
+.houseRight .u2{
+    display: block;
+}
 .houseRight ul:after{
     content: '';
     display: block;
@@ -876,6 +886,7 @@ h2{
     position: fixed;
     top:80px;
     right: 0;
+    z-index:2;
 }
 .data a{
     display: block;
@@ -898,20 +909,13 @@ h2{
 }
 .navMenu{
     position: absolute;
+    left: 0;
+    top: 260px;
     z-index: 1;
     width: 100%;
     background-color: #ffffff;
     height: 230px;
-    border: 1px solid rgba(85, 85, 85, 0.45);
-    display: none;
-}
-.miphone{
-    display: block;
-}
-.Redmi{
-    display: none;
-}
-.tv{
+    border: 1px solid rgba(198, 198, 198, 0.45);
     display: none;
 }
 .navMenu ul{
@@ -919,6 +923,7 @@ h2{
     margin-left: auto;
     margin-right: auto;
     zoom: 1;
+    padding: 0;
 }
 .navMenu ul:after{
     content: '';
@@ -934,6 +939,9 @@ h2{
     padding:30px 0 0 20px;
     text-align: center;
 }
+.navMenu a:hover{
+    color: #000000;
+}
 .navMenu img{
     border-right: 1px solid rgba(198, 198, 198, 0.45);
     width: 120px;
@@ -946,10 +954,65 @@ h2{
 .navMenu li p:nth-of-type(even){
     color: #ff6700;
     margin: 5px 0;
+
 }
-
-
-
-
-
-
+.navMenu p{
+    font-size: 12px;
+}
+.topMenu{
+    display: none;
+    position: absolute;
+    left: 233px;
+    top: 0;
+    z-index: 1;
+    width: 992px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    zoom: 1;
+}
+.topMenu:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.topMenu ul{
+    float: left;
+    padding: 0;
+    height: 458px;
+    background-color: white;
+}
+.topMenu li{
+    zoom: 1;
+}
+.topMenu a{
+    display: block;
+    width: 248px;
+    height: 76px;
+    color: #333;
+    padding: 0;
+    zoom: 1;
+}
+.topMenu a:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.topMenu img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 18px 10px;
+}
+.topMenu span{
+    float: left;
+    width: 172px;
+    line-height: 76px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    color: #333;
+}
+.topMenu li:hover {
+    background-color:#ffffff;
+}
