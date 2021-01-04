@@ -34,17 +34,24 @@
                 <span>|</span>
                 <a>协议规则</a>
                 <span>|</span>
-                <a>下载app</a>
+                <a id="download">下载app</a>
+                <div class="download" id="downloadapp">
+                    <div class="triangle" id="triangle"></div>
+                    <div class="app" id="app">
+                        <img src="img/icon/download.png">
+                        <p>小米商城APP</p>
+                    </div>
+                </div>
                 <span>|</span>
                 <a>智能生活</a>
                 <span>|</span>
                 <a>Select Location</a>
             </div>
             <div class="nav-right">
-                <a>
-                    <img src="img/icon/shoppingcart.png"/>
+                <a id="navRight">
+                    <img id="navRightImg" src="img/icon/shoppingcart.png"/>
                     购物车
-                    <span>（0）</span>
+                    <p>（0）</p>
                 </a>
             </div>
             <div class="nav-message">
@@ -59,7 +66,7 @@
     <div class="header-select">
         <div class="select-middle">
             <div class="select-logo">
-                <a href="//www.mi.com/index.html" title="小米官网"></a>
+                <a id="selectLogo" href="//www.mi.com/index.html" title="小米官网"></a>
             </div>
             <div class="select-nav">
                 <ul id="selectNavUl">
@@ -1702,17 +1709,18 @@
                 </ul>
             </div>
             <div class="top-right">
-                <div class="CarouselImg">
+                <div class="CarouselImg" id="CarouselImg">
+                    <img id="lunbo" src="img/Carousel/c1.jpg" />
                 </div>
-                <div class="CarouselList">
+                <div class="CarouselList" id="lunboList">
                     <a></a>
                     <a></a>
                     <a></a>
                     <a></a>
                     <a></a>
                 </div>
-                <div class="CarouselLeft"></div>
-                <div class="CarouselRight"></div>
+                <div class="CarouselLeft" id="left"></div>
+                <div class="CarouselRight" id="right"></div>
             </div>
         </div>
         <div class="home-hero-bottom">
@@ -1758,16 +1766,22 @@
                     </tr>
                 </table>
             </div>
-            <div class="bottom-right">
+            <div class="bottom-right" id="bottomRight">
                 <ul>
                     <li>
-                        <img src="img/images/One1.jpg" />
+                        <a>
+                            <img src="img/images/One1.jpg" />
+                        </a>
                     </li>
                     <li>
-                        <img src="img/images/One2.jpg" />
+                        <a>
+                            <img src="img/images/One2.jpg" />
+                        </a>
                     </li>
                     <li>
-                        <img src="img/images/One3.jpg" />
+                        <a>
+                            <img src="img/images/One3.jpg" />
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -1780,23 +1794,23 @@
         <div class="instantPurchaseOfmi">
             <h2>小米闪购</h2>
             <div class="arrow">
-                <div class="left"></div>
-                <div class="right"></div>
+                <div class="left" id="leftSwitch"></div>
+                <div class="right" id="rightSwitch"></div>
             </div>
             <div class="instantTop">
                 <div class="countDown">
                     <div class="round">14:00 场</div>
                     <img src="img/icon/lightning.png" />
                     <div class="desc">距离结束还有</div>
-                    <div class="clear">
-                        <span>03</span>
+                    <div class="clear" id="clear">
+                        <span></span>
                         <span>:</span>
-                        <span>08</span>
+                        <span></span>
                         <span>:</span>
-                        <span>02</span>
+                        <span></span>
                     </div>
                 </div>
-                <div class="seamless">
+                <div class="seamless" id="seamless">
                     <ul>
                         <li>
                             <a>
@@ -1902,7 +1916,6 @@
                                 <p>799元<del>1099元</del></p>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -1914,12 +1927,14 @@
         <div class="phone">
             <h2>手机</h2>
             <div class="arrow">
-                <a class="look">查看全部
-                    <img class="circleLeft" src="img/icon/circleLeft.png" />
+                <a class="look" id="lookPhone">查看全部
+                    <img class="circleLeft" id="lookPhoneImg" src="img/icon/circleLeft.png" />
                 </a>
             </div>
-            <div class="phoneTop">
-                <div class="phoneLeft"></div>
+            <div class="phoneTop" id="phoneTop">
+                <div class="phoneLeft">
+                    <a></a>
+                </div>
                 <div class="phoneRight">
                     <ul>
                         <li>
@@ -2003,10 +2018,10 @@
         </div>
         <div class="houseElectricApp">
             <h2>家电</h2>
-            <div class="arrow">
+            <div class="arrow" id="houseArrow">
                 <a>热门</a><a>电视影音</a>
             </div>
-            <div class="houseTop">
+            <div class="houseTop" id="houseTop">
                 <div class="houseLeft">
                     <ul>
                         <li>
@@ -2021,7 +2036,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="houseRight">
+                <div class="houseRight" id="houseRight">
                     <ul class="u1">
                         <li>
                             <a>
@@ -2173,16 +2188,16 @@
         <div class="video">
             <h2>视频</h2>
             <div class="arrow">
-                <a class="look">查看全部
-                    <img class="circleLeft" src="img/icon/circleLeft.png" />
+                <a class="look" id="lookVideo">查看全部
+                    <img class="circleLeft" id="lookVideoImg" src="img/icon/circleLeft.png" />
                 </a>
             </div>
-            <div class="video-play">
+            <div class="video-play" id="videoPlay">
                 <ul>
                     <li>
-                        <a>
-                            <img src="video/v0.jpg" />
-                            <span class="play">
+                        <a class="videoA">
+                            <img class="playImg" id="playImg" src="video/v0.jpg" />
+                            <span class="play" id="play">
                                 <img src="img/icon/play.png" />
                             </span>
                             <h3>Redmi 10X系列发布会</h3>
@@ -2190,8 +2205,8 @@
                         </a>
                     </li>
                     <li>
-                        <a>
-                            <img src="video/v1.jpg" />
+                        <a class="videoA">
+                            <img class="playImg" src="video/v1.jpg" />
                             <span class="play">
                                 <img src="img/icon/play.png" />
                             </span>
@@ -2199,22 +2214,23 @@
                         </a>
                     </li>
                     <li>
-                        <a>
-                            <img src="video/v2.jpg" />
-                            <span class="play">
+                        <a class="videoA">
+                            <img class="playImg" src="video/v2.jpg" />
+                            <span id="span" class="play">
                                 <img src="img/icon/play.png" />
                             </span>
                             <h3>小米10 8K手机拍大片</h3>
                         </a>
-                    </li><li>
-                    <a>
-                        <img src="video/v3.jpg" />
-                        <span class="play">
-                                <img src="img/icon/play.png" />
-                            </span>
-                        <h3>小米10发布会</h3>
-                    </a>
-                </li>
+                    </li>
+                    <li>
+                        <a class="videoA">
+                            <img class="playImg" src="video/v3.jpg" />
+                            <span class="play">
+                                    <img src="img/icon/play.png" />
+                                </span>
+                            <h3>小米10发布会</h3>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -2223,23 +2239,33 @@
 
 <div class="foot">
     <div class="footer">
-        <div class="list">
+        <div class="list" id="list">
             <ul>
-                <li class="firstLi"><a>
+                <li class="firstLi">
+                    <a>
                     <img src="img/icon/Aftersale.png" />
-                    预约维修服务</a></li>
-                <li><a>
+                    预约维修服务</a>
+                </li>
+                <li>
+                    <a>
                     <img src="img/icon/sevenDay.png" />
-                    7天无理由退货</a></li>
-                <li><a>
+                    7天无理由退货</a>
+                </li>
+                <li>
+                    <a>
                     <img src="img/icon/15Day.png" />
-                    15天免费换货</a></li>
-                <li><a>
+                    15天免费换货</a>
+                </li>
+                <li>
+                    <a>
                     <img src="img/icon/gift.png" />
-                    满99元包邮</a></li>
-                <li><a>
+                    满99元包邮</a>
+                </li>
+                <li>
+                    <a>
                     <img src="img/icon/position.png" />
-                    520余家售后网点</a></li>
+                    520余家售后网点</a>
+                </li>
             </ul>
         </div>
         <div class="footer-links">
@@ -2282,7 +2308,7 @@
                 <dd><a>礼物码</a></dd>
                 <dd><a>防伪查询</a></dd>
             </dl>
-            <div class="contact">
+            <div class="contact" id="contact">
                 <div class="mode">
                     <p class="firstP">400-100-5678</p>
                     <p>8:00-18:00（仅收市话费）</p>
@@ -2290,8 +2316,8 @@
                 </div>
                 <div class="follow">
                     关注小米：
-                    <a><img src="img/icon/micro-blog.png"></a>
-                    <a><img src="img/icon/wechat.png">  </a>
+                    <a id="followOne"><img id="followOneImg" src="img/icon/micro-blog.png"></a>
+                    <a id="followTwo"><img id="followTwoImg" src="img/icon/wechat.png">  </a>
                 </div>
             </div>
         </div>
@@ -2344,7 +2370,7 @@
                     <a><img src="img/icon/v-logo0.png"></a>
                     <a><img src="img/icon/v-logo.png"></a>
                     <a><img src="img/icon/management.png"></a>
-                    <a class="lastA"><img src="img/icon/serviced.png"></a>
+                    <a class="lastA" id="lastA"><img src="img/icon/serviced.png"></a>
                 </div>
             </div>
         </div>
@@ -2352,10 +2378,10 @@
             </div>
         </div>
 
-<div class="data">
+<div class="data" id="data">
     <ul>
         <li>
-            <a>
+            <a id="download1">
                 <img src="img/icon/applications.png" />
                 <p>手机APP</p>
             </a>
@@ -2384,14 +2410,20 @@
                 <p>购物车</p>
             </a>
         </li>
-
-        <li class="totop">
+        <li class="totop" id="totop">
             <a>
                 <img src="img/icon/totop.png" />
                 <p>回顶部</p>
             </a>
         </li>
     </ul>
+    <div class="download1" id="downloadapp1">
+        <div class="triangle1"></div>
+        <div class="app1">
+            <img src="img/icon/download.png">
+            <p>扫码领取新人百元红包</p>
+        </div>
+    </div>
 </div>
 </body>
 </html>

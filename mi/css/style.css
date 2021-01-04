@@ -61,6 +61,7 @@ body {
     margin-left: auto;
     line-height: 40px;
     zoom: 1;
+    position: relative;
 }
 .nav-middle:after{
     content: '';
@@ -76,19 +77,56 @@ body {
 .nav-left span{
     margin: 3px;
 }
+.download{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 35px;
+    left: 545px;
+}
+.triangle{/*
+    display: none;*/
+    transform:rotate(45deg);
+    width: 10px;
+    height: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+.app{
+    margin-top: -5px;
+    width: 120px;
+    height: 150px;
+    background-color: #ffffff;
+}
+.app img{
+    width: 90px;
+    margin:20px 15px 10px 15px;
+}
+.app p{
+    font-size: 14px;
+    color: #5a5a5a;
+    text-align: center;
+    margin: 0;
+    line-height: normal;
+}
 .nav-right{
     width: 120px;
     height: 40px;
     float: right;
-    /*margin-left: ;*/
+    background-color: #464646;
 }
 .nav-right a{
     display: block;
     height: 40px;
     text-align: center;
 }
-.nav-right span{
-    color: #b0b0b0;
+.nav-right p{
+    display: inline-block;
+}
+.nav-right a:hover{
+    color: #ff6700;
+    background-color: #ffffff;
 }
 .nav-right img{
     margin-top:10px;
@@ -118,14 +156,31 @@ body {
     margin-top: 22px;
 }
 .select-logo a{
-    display: inline-block;
+    position: relative;
+    display: block;
     width: 55px;
     height: 55px;
     background-color: #ff6700;
-    background-image: url("../img/icon/mi-home.png");
-    background-repeat:  no-repeat;
-    background-position: 50%;
-    background-size:40px;
+    overflow:hidden;
+}
+.select-logo a:after,.select-logo a:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 55px;
+    width: 55px;
+    content: "";
+    transition: transform .3s;
+}
+.select-logo a:before{
+    background: url(../img/icon/mi-logo.png) no-repeat 50% 50%;
+}
+.select-logo a:after{
+    background: url(../img/icon/mi-home.png) no-repeat 50% 50%;
+    margin-left: -55px;
+}
+.select-logo a:hover:after,.select-logo a:hover:before {
+    transform: translate(55px);
 }
 .select-nav{
     float: left;
@@ -272,6 +327,10 @@ body {
     margin: 10px auto;
     line-height: 30px;
 }
+.mode a:hover{
+    background-color: #ff6700;
+    color: #ffffff;
+}
 .mode img{
     margin: 7px 5px;
     width: 16px;
@@ -401,8 +460,11 @@ info:after{
 .CarouselImg{
     width: 100%;
     height: 100%;
-    background: url("../img/Carousel/c1.jpg")no-repeat;
-    background-size: 100%;
+   /* background: url("../img/Carousel/c1.jpg")no-repeat;
+    background-size: 100%;*/
+}
+.CarouselImg img{
+    height: 460px;
 }
 .CarouselList{
     position: absolute;
@@ -414,12 +476,15 @@ info:after{
     margin: 0 4px;
     width: 6px;
     height: 6px;
-    border: 2px solid #fff;
+    border: 2px solid;
     border-color: hsla(0,0%,100%,0.3);
     border-radius: 6px;
     overflow: hidden;
-    background: rgba(0,0,0,.4);
+    background: rgba(0,0,0,0.4);
     opacity: 1;
+}
+.CarouselList a:first-child{
+    background: rgba(166,166,166,0.38);
 }
 .CarouselLeft{
     background: url("../img/icon/icon-slides.png") no-repeat;
@@ -469,8 +534,11 @@ info:after{
 }
 .bottom-left a{
     display: block;
-    color: #ffffff;
+    color: #d9d9d9;
     opacity: 0.7;
+}
+.bottom-left a:hover{
+    color: #ffffff;
 }
 .bottom-left img{
     display: block;
@@ -493,10 +561,13 @@ info:after{
 .bottom-right li{
     float: left;
 }
-.bottom-right img{
+.bottom-right a{
     margin-left: 14px;
     display: block;
     width: 316px;
+    height: 170px;
+}
+.bottom-right img{
     height: 170px;
 }
 .icon-main-contains{
@@ -628,6 +699,8 @@ h2{
     overflow: hidden;
 }
 .seamless ul{
+    position: relative;
+    width: 100%;
     height: 340px;
     display: flex;
     zoom: 1;
@@ -674,13 +747,19 @@ h2{
     font-size: 16px;
     color: #424242;
 }
+.look:hover{
+    color: #ff6700;
+}
 .circleLeft{
     width: 20px;
     padding: 0 4px;
 }
 .phoneTop{
     zoom: 1;
-}
+}/*
+.phoneTop a{
+    box-shadow:#a9a9a975 0px 8px 7px 0px;
+}*/
 .phoneTop:after{
     content: '';
     display: block;
@@ -688,15 +767,18 @@ h2{
 }
 .phoneLeft{
     display: inline-block;
-    float: left;
     width: 234px;
+    float: left;
+}
+.phoneLeft a{
+    display: block;
     height: 614px;
     background: url("../img/images/miMIX.jpg")no-repeat;
     background-size: 234px;
 }
 .phoneRight{
     display: inline-block;
-    float: right;
+    float: left;
 }
 .phoneRight ul{
     width: 992px;
@@ -731,8 +813,10 @@ h2{
 .houseElectricApp .arrow a{
     margin: 0 0 0 30px;
     font-size: 16px;
-   /* border-bottom:3px solid #ff6700;
-    color: #ff6700;*/
+}
+.houseElectricApp .arrow a:first-child{
+     border-bottom:3px solid #ff6700;
+     color: #ff6700;
 }
 .houseTop{
     zoom: 1;
@@ -742,17 +826,21 @@ h2{
     display: block;
     clear: both;
 }
+.houseTop a{
+    display: block;
+    width: 234px;
+
+    margin-bottom: 14px;
+}
 .houseLeft{
     float: left;
 }
 .houseLeft a{
-    display: block;
-    width: 234px;
     height: 100%;
 }
 .houseLeft img{
     width: 234px;
-    margin-bottom: 14px;
+    height: 300px;
 }
 .houseRight{
     display: inline-block;
@@ -763,10 +851,10 @@ h2{
     zoom: 1;
 }
 .houseRight .u1{
-    display: none;
+    display: block;
 }
 .houseRight .u2{
-    display: block;
+    display: none;
 }
 .houseRight ul:after{
     content: '';
@@ -777,13 +865,10 @@ h2{
     float: left;
 }
 .houseRight a{
-    display: block;
-    width: 234px;
     height: 260px;
     padding: 20px 0;
     background-color: #ffffff;
     margin-left: 14px;
-    margin-bottom: 14px;
 }
 .houseRight img{
     display: block;
@@ -849,6 +934,7 @@ h2{
     margin-right: 0;
 }
 .video-play a{
+    position: relative;
     display: block;
     width: 296px;
     height: 285px;
@@ -888,8 +974,12 @@ h2{
     right: 0;
     z-index:2;
 }
+.data p{
+    font-size: 14px;
+}
 .data a{
     display: block;
+    color: #757575;
     width: 80px;
     height: 90px;
     background-color: #fff;
@@ -900,12 +990,46 @@ h2{
     width: 30px;
     margin: 20px 0 5px;
 }
-.data p{
-    color: #757575;
+.data a:hover{
+    color: #ff6700;
 }
 .data .totop{
     margin-top: 20px;
     display: none;
+}
+.download1{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right:95px;
+}
+.triangle1{
+    transform:rotate(45deg);
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 35px;
+    right: -7px;
+}
+.app1{
+    margin-top: -5px;
+    width: 130px;
+    height: 190px;
+    background-color: #ffffff;
+}
+.app1 img{
+    width: 100px;
+    margin:20px 15px 10px 15px;
+}
+.app1 p{
+    font-size: 14px;
+    color: #5a5a5a;
+    text-align: center;
+    margin: 0;
+    line-height: normal;
+    padding: 0 25px;
 }
 .navMenu{
     position: absolute;
